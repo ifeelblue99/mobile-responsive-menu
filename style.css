@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: rgb(117, 117, 117);
+}
+header{
+    padding: .5rem 1rem;
+    background-color: rgb(242, 255, 255);
+    display: flex;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.219);
+    align-items: center;
+    justify-content: space-evenly;
+}
+nav{
+    display: flex;
+    gap: 1rem;
+}
+nav span{
+    padding: .3rem;
+    cursor: pointer;
+}
+nav span:hover{
+    background-color: rgb(238, 238, 238);
+}
+
+#svg-button{
+    display: none;
+    position: relative;
+    right: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+@media (max-width:700px){
+    nav{
+        overflow: hidden;
+        top: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(242, 255, 255);
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        transition: all .3s linear;
+    }
+    .open{
+        font-size: 1.3rem;
+        /* look at mobile-menu.js for more */
+    }
+    header{
+        justify-content: space-between;
+    }
+    #svg-button{
+        display: inline-block;
+    }
+}
